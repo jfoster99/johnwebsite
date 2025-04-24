@@ -1,25 +1,45 @@
-PS C:\Users\jfost\johnwebsite> kubectl port-forward svc/website-service 3040:3040 --address='0.0.0.0'                   
-Unable to listen on port 3040: Listeners failed to create with the following errors: [unable to create listener: Error listen tcp4 0.0.0.0:3040: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted.]
-error: unable to listen on any of the requested ports: [{3040 8080}]FROM nginx:stable
+# Build stage
+FROM nginx:1.24-alpine AS builder
 
-# Remove default nginx static content
-RUN rm -rf /usr/share/nginx/html/* && \
-    mkdir -p /usr/share/nginx/html
+# Set working directory
+WORKDIR /usr/share/nginx/html
 
 # Copy website files
-COPY src/* /usr/share/nginx/html/
-COPY src/css /usr/share/nginx/html/css/
-COPY src/js /usr/share/nginx/html/js/
-COPY src/images /usr/share/nginx/html/images/
-COPY modules /usr/share/nginx/html/modules/
+COPY src/index.html ./
+COPY src/css ./css/
+COPY src/js ./js/
+COPY src/images ./images/
+COPY modules ./modules/
 
-# Set proper permissions
+# Set proper permissions for all files
 RUN chown -R nginx:nginx /usr/share/nginx/html && \
     chmod -R 755 /usr/share/nginx/html && \
-    chmod 644 /usr/share/nginx/html/*.html
+    find /usr/share/nginx/html -type f -exec chmod 644 {} \;
+
+# Final stage
+FROM nginx:1.24-alpine
 
 # Copy nginx configuration
 COPY k8s/nginx.conf /etc/nginx/nginx.conf
 
+# Create required directories with proper permissions
+RUN mkdir -p /var/cache/nginx /var/run && \
+    chown -R nginx:nginx /var/cache/nginx /var/run /etc/nginx/conf.d && \
+    chmod -R 755 /var/cache/nginx /var/run && \
+    # Remove default nginx static content
+    rm -rf /usr/share/nginx/html/* && \
+    # Fix permissions on /etc/nginx
+    chmod -R 755 /etc/nginx
+
+# Copy built static files from builder stage
+COPY --from=builder --chown=nginx:nginx /usr/share/nginx/html /usr/share/nginx/html
+
 # Switch to non-root user
 USER nginx
+
+# Expose port
+EXPOSE 8080
+
+# Health check
+HEALTHCHECK --interval=30s --timeout=3s \
+    CMD wget -q --spider http://localhost:8080/ || exit 1
