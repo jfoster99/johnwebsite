@@ -7,9 +7,9 @@ WORKDIR /usr/share/nginx/html
 # Copy website files
 COPY src/index.html ./
 COPY src/css ./css/
-COPY src/js ./js/
-COPY src/images ./images/
-COPY modules ./modules/
+# COPY src/js ./js/
+# COPY src/images ./images/
+# COPY modules ./modules/
 
 # Set proper permissions for all files
 RUN chown -R nginx:nginx /usr/share/nginx/html && \
