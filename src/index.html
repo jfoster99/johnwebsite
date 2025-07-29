@@ -1,20 +1,23 @@
 <!DOCTYPE html>
-<link rel="stylesheet" href="css/styles.css">
-<html>
+<html lang="en">
 <head>
-    <title>John's Portfolio</title>
+    <title>John Foster - Senior Cloud Engineer</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/styles.css">
+    <meta name="description" content="John Foster - Assistant Vice President, Senior Cloud Engineer with expertise in Kubernetes orchestration, Helm, Argo CD, and DevSecOps practices">
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="/" class="active">Home</a></li>
-                <li><a href="/modules/snake-game/">Play Snake</a></li>
-                <li><a href="/modules/news-feed/">Latest News</a></li>
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#expertise">Expertise</a></li>
+                <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -22,31 +25,122 @@
     </header>
     
     <main>
-        <section class="about-me section">
-            <h1>Welcome to My Digital Space</h1>
-            <div class="profile-container">
-                <img src="https://media.licdn.com/dms/image/v2/C5603AQE62gVMZYGNAg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1614640685319?e=1750896000&v=beta&t=Lj20W9ZBmFStOT5Py4O6TC90IZT8IouFIf8rBMkW1Ek" alt="Profile Picture" class="profile-image">
-                <div class="bio">
-                    <h2>Hi, I'm John! 👋</h2>
-                    <p>I'm a Cloud & DevOps Engineer with three years of hands-on experience driving CI/CD optimization, platform migration, and security enhancements. Proven track record in accelerating deployment cycles, reducing costs, and implementing end-to-end security practices. Skilled in guiding DevOps strategy, automating cloud infrastructure, and leading cross-functional initiatives to enhance team productivity.</p>
+        <section id="home" class="hero-section">
+            <div class="hero-content">
+                <h1>John Foster</h1>
+                <h2>Assistant Vice President, Senior Cloud Engineer</h2>
+                <p class="hero-description">Transforming financial services through secure, scalable cloud solutions and advanced Kubernetes orchestration</p>
+                <div class="hero-cta">
+                    <a href="#experience" class="btn-primary">View Experience</a>
+                    <a href="#contact" class="btn-secondary">Get In Touch</a>
                 </div>
             </div>
         </section>
 
-        <section id="skills" class="section">
-            <h2>What I Do</h2>
+        <section class="about-me section">
+            <div class="profile-container">
+                <img src="Images/john.jpg" alt="John Foster" class="profile-image">
+                <div class="bio">
+                    <h2>Hi, I'm John! 👋</h2>
+                    <p>I'm an Assistant Vice President and Senior Cloud Engineer at Texas Capital with a passion for building secure, scalable infrastructure that powers the future of financial services. With a BBA in Management Information Systems from the University of Oklahoma and AWS Cloud Practitioner certification, I specialize in advanced Kubernetes orchestration and DevSecOps practices.</p>
+                    <p>My journey from System Administrator to Assistant Vice President has given me deep expertise in cloud security architecture, CI/CD optimization, and cross-functional team leadership. I love turning complex technical challenges into elegant, automated solutions that drive business value.</p>
+                    <div class="credentials">
+                        <div class="credential">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>BBA in MIS, University of Oklahoma</span>
+                        </div>
+                        <div class="credential">
+                            <i class="fas fa-certificate"></i>
+                            <span>AWS Certified Cloud Practitioner</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="expertise" class="section">
+            <h2>Core Expertise</h2>
             <div class="skills-grid">
                 <div class="skill-card">
-                    <h3>Continuous Integration and Continuous Delivery (CI/CD)</h3>
-                    <p>Oversaw end-to-end CI/CD pipeline support, ensuring smooth and reliable deployment cycles across all environments.</p>
+                    <div class="skill-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Cloud Security Architecture</h3>
+                    <p>Integrated GitHub Advanced Security with SAST, SCA, and secret scanning. Implemented comprehensive security frameworks across Azure and AWS environments with compliance to CIS and NIST standards.</p>
                 </div>
                 <div class="skill-card">
-                    <h3>Cloud Services</h3>
-                    <p>Deploying and managing applications using Docker, Kubernetes, and cloud platforms.</p>
+                    <div class="skill-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>CI/CD Pipeline Optimization</h3>
+                    <p>Led migration from Azure DevOps to GitHub Enterprise, increasing deployment efficiency by 40%. Implemented EKS-hosted runners for Kubernetes workloads, reducing costs while enhancing scalability.</p>
                 </div>
                 <div class="skill-card">
-                    <h3>GitHub Enterprise</h3>
-                    <p>Led a company-wide migration to a new CI/CD platform, improving deployment efficiency with new AI tools.</p>
+                    <div class="skill-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3>DevSecOps Implementation</h3>
+                    <p>Deployed and integrated Tenable, SkyHigh, and Microsoft Defender for comprehensive vulnerability management. Strengthened CI/CD pipelines with automated security scans and enhanced access controls.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Strategic Leadership</h3>
+                    <p>Directed quarterly innovation forums and led cross-functional workshops to upskill teams on secure coding standards. Promoted adoption of cutting-edge technologies through collaborative learning initiatives.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="section">
+            <h2>Professional Experience</h2>
+            <div class="experience-timeline">
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <h3>Assistant Vice President, Senior Cloud Engineer</h3>
+                        <span class="company">Texas Capital</span>
+                        <span class="duration">May 2021 - Present</span>
+                    </div>
+                    <div class="experience-content">
+                        <ul>
+                            <li>Lead Kubernetes deployments and orchestration using Helm charts and Argo CD/Workflows</li>
+                            <li>Integrated GitHub Advanced Security, enhancing code quality with SAST, SCA, and secret scanning</li>
+                            <li>Led migration from Azure DevOps to GitHub Enterprise, increasing deployment efficiency</li>
+                            <li>Implemented EKS-hosted runners, reducing costs and enhancing Kubernetes scalability</li>
+                            <li>Deployed Tenable, SkyHigh, and Microsoft Defender for comprehensive vulnerability management</li>
+                            <li>Directed quarterly innovation forums, promoting cross-team learning and technology adoption</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <h3>Analyst, Cloud DevOps Engineer</h3>
+                        <span class="company">Texas Capital</span>
+                        <span class="duration">August 2022 - March 2024</span>
+                    </div>
+                    <div class="experience-content">
+                        <ul>
+                            <li>Developed Git platform and CI/CD architecture plans with focus on pipeline robustness</li>
+                            <li>Presented secure development frameworks and led workshops on secure coding standards</li>
+                            <li>Strengthened CI/CD pipelines with enhanced access controls and automated vulnerability scans</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <h3>System Administrator</h3>
+                        <span class="company">OU IT Operations</span>
+                        <span class="duration">February 2021 - May 2022</span>
+                    </div>
+                    <div class="experience-content">
+                        <ul>
+                            <li>Maintained and optimized Azure Active Directory, DNS, and Windows systems</li>
+                            <li>Automated identity management processes using PowerShell, improving access control</li>
+                            <li>Enhanced IAM systems through role-based access configurations and encryption standards</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
@@ -55,45 +149,66 @@
             <h2>Featured Projects</h2>
             <div class="projects-grid">
                 <article class="project-card">
-                    <img src="/images/snake-game.jpg" alt="Snake Game" class="project-image">
+                    <div class="project-image-placeholder">
+                        <i class="fas fa-shield-virus"></i>
+                    </div>
                     <div class="project-content">
-                        <h3>Snake Game</h3>
-                        <p>A modern take on the classic Snake game, built with JavaScript and HTML5 Canvas.</p>
-                        <a href="/modules/snake-game/" class="tag">Play Now</a>
+                        <h3>GitHub Advanced Security Integration</h3>
+                        <p>Implemented comprehensive security scanning across the entire development pipeline, integrating SAST, SCA, and secret scanning to enhance code quality and compliance with CIS and NIST standards.</p>
+                        <div class="project-tags">
+                            <span class="tag">GitHub Advanced Security</span>
+                            <span class="tag">SAST/SCA</span>
+                            <span class="tag">Compliance</span>
+                        </div>
                     </div>
                 </article>
                 <article class="project-card">
-                    <img src="/images/news-feed.jpg" alt="News Feed" class="project-image">
+                    <div class="project-image-placeholder">
+                        <i class="fas fa-exchange-alt"></i>
+                    </div>
                     <div class="project-content">
-                        <h3>News Feed</h3>
-                        <p>A personalized news aggregator that brings you the latest updates from various sources.</p>
-                        <a href="/modules/news-feed/" class="tag">Check It Out</a>
+                        <h3>Azure DevOps to GitHub Migration</h3>
+                        <p>Led enterprise-wide migration from Azure DevOps to GitHub Enterprise, increasing deployment efficiency by 40% and enabling seamless integration of DevSecOps workflows across all teams.</p>
+                        <div class="project-tags">
+                            <span class="tag">GitHub Enterprise</span>
+                            <span class="tag">Migration</span>
+                            <span class="tag">DevSecOps</span>
+                        </div>
                     </div>
                 </article>
                 <article class="project-card">
-                    <img src="/images/portfolio.jpg" alt="Portfolio Website" class="project-image">
+                    <div class="project-image-placeholder">
+                        <i class="fas fa-ship"></i>
+                    </div>
                     <div class="project-content">
-                        <h3>This Website</h3>
-                        <p>A responsive portfolio website built with modern CSS features and containerized with Docker.</p>
-                        <span class="tag">Featured</span>
+                        <h3>Advanced Kubernetes Orchestration</h3>
+                        <p>Lead Kubernetes deployments and orchestration using Helm charts and Argo CD/Workflows, implementing GitOps practices for automated, declarative infrastructure management across production environments.</p>
+                        <div class="project-tags">
+                            <span class="tag">Helm</span>
+                            <span class="tag">Argo CD</span>
+                            <span class="tag">GitOps</span>
+                        </div>
                     </div>
                 </article>
             </div>
         </section>
 
         <section id="contact" class="section">
-            <h2>Get In Touch</h2>
-            <div class="about-me" style="text-align: center;">
-                <p>Interested in collaborating or just want to say hi? Feel free to reach out!</p>
+            <h2>Let's Connect</h2>
+            <div class="contact-content">
+                <p>Interested in collaborating on cloud infrastructure, Kubernetes orchestration, or discussing how to transform your organization's deployment strategies? I'd love to hear from you!</p>
                 <div class="social-links">
-                    <a href="https://github.com/" class="social-link" target="_blank">
-                        <i class="fab fa-github"></i> GitHub
+                    <a href="https://github.com/jfoster99" class="social-link" target="_blank" rel="noopener">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
                     </a>
-                    <a href="https://linkedin.com/" class="social-link" target="_blank">
-                        <i class="fab fa-linkedin"></i> LinkedIn
+                    <a href="https://linkedin.com/in/johnfosterou/" class="social-link" target="_blank" rel="noopener">
+                        <i class="fab fa-linkedin"></i>
+                        <span>LinkedIn</span>
                     </a>
                     <a href="mailto:contact@example.com" class="social-link">
-                        <i class="fas fa-envelope"></i> Email
+                        <i class="fas fa-envelope"></i>
+                        <span>Email</span>
                     </a>
                 </div>
             </div>
@@ -101,17 +216,16 @@
     </main>
 
     <footer>
-        <p>&copy; 2025 John's Portfolio. Built with passion and coffee ☕</p>
-        <div class="social-links">
-            <a href="https://github.com/jfoster99" class="social-link" target="_blank">
-                <i class="fab fa-github"></i>
-            </a>
-            <a href="https://linkedin.com/in/johnfosterou/" class="social-link" target="_blank">
-                <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="mailto:contact@example.com" class="social-link">
-                <i class="fas fa-envelope"></i>
-            </a>
+        <div class="footer-content">
+            <p>&copy; 2025 John Foster. </p>
+            <div class="footer-links">
+                <a href="https://github.com/jfoster99" target="_blank" rel="noopener">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/johnfosterou/" target="_blank" rel="noopener">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
         </div>
     </footer>
 </body>
