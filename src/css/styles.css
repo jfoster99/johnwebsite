@@ -130,17 +130,16 @@ main {
 
 /* Hero Section */
 .hero-section {
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    background: transparent;
     color: white;
+    padding: 100px 20px;
     text-align: center;
-    padding: 8rem 2rem 6rem 2rem;
-    margin: 0;
-    max-width: none;
-    min-height: 70vh;
+    position: relative;
+    overflow: hidden;
+    min-height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
 }
 
 .hero-content {

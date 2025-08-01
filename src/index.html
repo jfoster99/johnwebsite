@@ -10,6 +10,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/particles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
 </head>
 <body>
     <header>
@@ -26,6 +28,7 @@
     
     <main>
         <section id="home" class="hero-section">
+            <div id="particles-js"></div>
             <div class="hero-content">
                 <h1>John Foster</h1>
                 <h2>Senior Cloud Engineer</h2>
@@ -34,9 +37,9 @@
                     <a href="#experience" class="btn-primary">View Experience</a>
                     <a href="#contact" class="btn-secondary">Get In Touch</a>
                 </div>
-                <div class="scroll-indicator" onclick="document.getElementById('experience').scrollIntoView({behavior: 'smooth'})">
-                    <i class="fas fa-chevron-down"></i> Scroll to explore
-                </div>
+            </div>
+            <div class="scroll-indicator" onclick="document.getElementById('experience').scrollIntoView({behavior: 'smooth'})">
+                <i class="fas fa-chevron-down"></i> Scroll to explore
             </div>
         </section>
 
@@ -64,28 +67,28 @@
         <section id="expertise" class="section">
             <h2>Core Expertise</h2>
             <div class="skills-grid">
-                <div class="skill-card">
+                <div class="skill-card" data-aos="fade-up">
                     <div class="skill-icon">
                         <i class="fas fa-shield-alt"></i>
                     </div>
                     <h3>Cloud Security Architecture</h3>
                     <p>Integrated GitHub Advanced Security with SAST, SCA, and secret scanning. Implemented comprehensive security frameworks across Azure and AWS environments with compliance to CIS and NIST standards.</p>
                 </div>
-                <div class="skill-card">
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="skill-icon">
                         <i class="fas fa-rocket"></i>
                     </div>
                     <h3>CI/CD Pipeline Optimization</h3>
                     <p>GitHub and Azure DevOps CI/CD expert with proven expertise in pipeline design and optimization. Led migration from Azure DevOps to GitHub Enterprise, increasing deployment efficiency by 40%. Implemented EKS-hosted runners for Kubernetes workloads, reducing costs while enhancing scalability.</p>
                 </div>
-                <div class="skill-card">
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="skill-icon">
                         <i class="fas fa-cloud"></i>
                     </div>
                     <h3>DevSecOps Implementation</h3>
                     <p>Expert in DevSecOps practices with deep experience integrating security into every stage of the development lifecycle. Deployed and integrated Tenable, SkyHigh, and Microsoft Defender for comprehensive vulnerability management. Strengthened CI/CD pipelines with automated security scans and enhanced access controls.</p>
                 </div>
-                <div class="skill-card">
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="300">
                     <div class="skill-icon">
                         <i class="fas fa-users"></i>
                     </div>
@@ -244,5 +247,76 @@
             </div>
         </div>
     </footer>
+    
+    <!-- Animation Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+
+        // Initialize particles.js
+        particlesJS('particles-js',
+            {
+                "particles": {
+                    "number": {
+                        "value": 80,
+                        "density": {
+                            "enable": true,
+                            "value_area": 800
+                        }
+                    },
+                    "color": {
+                        "value": "#a8d0ff"
+                    },
+                    "shape": {
+                        "type": "circle"
+                    },
+                    "opacity": {
+                        "value": 0.7,
+                        "random": false
+                    },
+                    "size": {
+                        "value": 3,
+                        "random": true
+                    },
+                    "line_linked": {
+                        "enable": true,
+                        "distance": 150,
+                        "color": "#a8d0ff",
+                        "opacity": 0.6,
+                        "width": 1
+                    },
+                    "move": {
+                        "enable": true,
+                        "speed": 6,
+                        "direction": "none",
+                        "random": false,
+                        "straight": false,
+                        "out_mode": "out",
+                        "bounce": false
+                    }
+                },
+                "interactivity": {
+                    "detect_on": "canvas",
+                    "events": {
+                        "onhover": {
+                            "enable": true,
+                            "mode": "repulse"
+                        },
+                        "onclick": {
+                            "enable": true,
+                            "mode": "push"
+                        },
+                        "resize": true
+                    }
+                },
+                "retina_detect": true
+            }
+        );
+    </script>
 </body>
 </html>
